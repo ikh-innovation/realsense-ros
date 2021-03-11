@@ -31,6 +31,9 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
   <arg name="initial_reset"         default="false"/>
   <arg name="unite_imu_method"      default=""/>
 
+  <arg name="camera_odom_frame"     default="aristos_odom"/>
+
+
   <arg name="publish_odom_tf"     default="true"/>
   
   <group ns="$(arg camera)">
@@ -60,6 +63,8 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
       <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
 
       <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
+      <arg name="odom_frame_id"            value="$(arg camera_odom_frame)"/>
+
     </include>
   </group>
 </launch>
